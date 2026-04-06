@@ -59,7 +59,7 @@ const Hero = () => (
           Cuidar es complejo, <span className="text-primary">Cuidora</span> Cuida contigo.
         </h1>
         <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-          Nuestro propósito es apoyar el trabajode y entre quienes cuidan, ayudándoles a registrar, organizar y seguir sus acciones de manera confiable.
+          Nuestro propósito es apoyar el trabajo de y entre quienes cuidan, ayudándoles a registrar, organizar y seguir sus acciones de manera confiable.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <button className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-all shadow-xl flex items-center justify-center gap-2 group">
