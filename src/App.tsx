@@ -58,9 +58,29 @@ const Hero = () => (
         <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 leading-[1.1] mb-6">
           Cuidar es complejo, <span className="text-primary">Cuidora</span> Cuida contigo.
         </h1>
-        <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+        <p className="text-xl text-gray-600 mb-6 leading-relaxed">
           Nuestro propósito es apoyar el trabajo de y entre quienes cuidan, ayudándoles a registrar, organizar y seguir sus acciones de manera confiable.
         </p>
+        <div className="mb-8">
+          <p className="text-xs font-bold uppercase tracking-wider text-gray-500 mb-3">Para todo tipo de cuidado</p>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "Adultos mayores",
+              "Infancia",
+              "Personas con discapacidad",
+              "Recuperación posoperatoria",
+              "Enfermedades crónicas",
+            ].map((item) => (
+              <span
+                key={item}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary-light text-primary-dark rounded-full text-sm font-medium"
+              >
+                <CheckCircle2 size={14} className="text-primary" />
+                {item}
+              </span>
+            ))}
+          </div>
+        </div>
         <div className="flex flex-col sm:flex-row gap-4">
           <button className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-all shadow-xl flex items-center justify-center gap-2 group">
             Únete a la red <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -117,7 +137,7 @@ const InfoSection = () => (
       <div className="text-center max-w-3xl mx-auto mb-16">
         <h2 className="text-4xl font-bold text-gray-900 mb-6">Tejiendo una red de cuidado</h2>
         <p className="text-lg text-gray-600">
-          A través de Cuidora se teje una red de cuidado, se registran las rutinas diarias y se optimiza la planificación del cuidado de tu familiar.
+          A través de Cuidora se teje una red de cuidado, se registran las rutinas diarias y se optimiza la planificación del cuidado de la persona que cuidas.
         </p>
       </div>
       
@@ -222,12 +242,12 @@ const Purpose = () => (
         <div className="lg:w-1/2 grid grid-cols-2 gap-4">
           <img 
             src="/care-1.jpg"
-            alt="Cuidadora acompañando adulto mayor"
+            alt="Cuidadora acompañando a una persona"
             className="rounded-2xl shadow-md w-full aspect-square object-cover"
           />
           <img 
             src="/care-2.jpg"
-            alt="Familia cuidando adulto mayor"
+            alt="Familia coordinando el cuidado de un ser querido"
             className="rounded-2xl shadow-md w-full aspect-square object-cover mt-8"
           />
         </div>
