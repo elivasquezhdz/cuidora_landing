@@ -18,6 +18,8 @@ import {
   Rocket
 } from 'lucide-react';
 
+const APP_URL = 'https://app.cuidora.xyz';
+
 const Navbar = () => (
   <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-primary/10">
     <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
@@ -31,9 +33,9 @@ const Navbar = () => (
         <a href="#proposito" className="hover:text-primary transition-colors">Propósito</a>
         <a href="#mision" className="hover:text-primary transition-colors">Misión</a>
         <a href="#vision" className="hover:text-primary transition-colors">Visión</a>
-        <button className="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition-all shadow-md hover:shadow-lg">
+        <a href={APP_URL} className="bg-primary text-white px-6 py-2.5 rounded-full hover:bg-primary-dark transition-all shadow-md hover:shadow-lg">
           Comenzar ahora
-        </button>
+        </a>
       </div>
     </div>
   </nav>
@@ -82,9 +84,9 @@ const Hero = () => (
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-all shadow-xl flex items-center justify-center gap-2 group">
+          <a href={APP_URL} className="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-dark transition-all shadow-xl flex items-center justify-center gap-2 group">
             Únete a la red <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
           <button className="bg-white text-primary border-2 border-primary/20 px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-light transition-all flex items-center justify-center">
             Saber más
           </button>
@@ -259,7 +261,7 @@ const Purpose = () => (
 const Footer = () => (
   <footer className="bg-white border-t border-primary/10 pt-20 pb-10">
     <div className="max-w-7xl mx-auto px-6">
-      <div className="grid md:grid-cols-4 gap-12 mb-16">
+      <div className="grid md:grid-cols-3 gap-12 mb-16">
         <div className="col-span-2">
           <div className="flex items-center gap-2 mb-6">
             <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -277,13 +279,6 @@ const Footer = () => (
             <li><a href="#proposito" className="hover:text-primary transition-colors">Propósito</a></li>
             <li><a href="#mision" className="hover:text-primary transition-colors">Misión</a></li>
             <li><a href="#vision" className="hover:text-primary transition-colors">Visión</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 className="font-bold text-gray-900 mb-6">Contacto</h4>
-          <ul className="space-y-4 text-gray-500 text-sm">
-            <li>info@cuidora.com</li>
-            <li>+1 (555) 000-0000</li>
           </ul>
         </div>
       </div>
@@ -317,9 +312,9 @@ export default function App() {
             <p className="text-xl text-primary-light/80 mb-10">
               Únete a nuestra red y descubre cómo la tecnología puede hacer tu labor más clara, confiable y organizada.
             </p>
-            <button className="bg-white text-primary-dark px-10 py-4 rounded-full text-lg font-bold hover:bg-primary-light transition-all shadow-2xl flex items-center justify-center gap-2 mx-auto group">
+            <a href={APP_URL} className="bg-white text-primary-dark px-10 py-4 rounded-full text-lg font-bold hover:bg-primary-light transition-all shadow-2xl flex items-center justify-center gap-2 mx-auto group">
               Empezar ahora <Smartphone size={20} className="group-hover:scale-110 transition-transform" />
-            </button>
+            </a>
           </div>
         </section>
       </main>
